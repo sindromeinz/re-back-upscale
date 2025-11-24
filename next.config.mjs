@@ -1,11 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  basePath: '/re-back-upscale', // This tells Next.js where it lives
   images: {
-    unoptimized: true,
+    unoptimized: true, // Required for GitHub Pages
   },
-  assetPrefix: '/remove-background',
-  basePath: '/remove-background',
 };
 
 export default nextConfig;
