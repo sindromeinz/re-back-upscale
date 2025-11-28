@@ -60,6 +60,13 @@ const ImagePairComponent = memo(({ pair, onRemove }: { pair: ImagePair; onRemove
                 <FiDownload className="mr-1" />
                 Download
               </a>
+              
+              {/* --- MONETIZATION: PRINTFUL LINK (Per Image) --- */}
+              <div className="mt-2 text-sm">
+                 <a href="https://www.printful.com/" target="_blank" className="text-purple-600 hover:underline font-bold">
+                    🖨️ Print this on a T-Shirt
+                 </a>
+              </div>
             </>
           ) : (
             <div className="w-full pt-[100%] relative bg-gray-200 rounded-lg">
@@ -126,8 +133,6 @@ export default function Home() {
   const [quality, setQuality] = useState<number>(85);
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
-
-  // Remove the useEffect hook that was preloading the model
 
   const handleImageUpload = useCallback((files: FileList | null) => {
     if (files) {
@@ -220,9 +225,25 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-100 to-purple-200 p-8">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-5xl font-extrabold mb-8 text-center text-indigo-900">
+        <h1 className="text-5xl font-extrabold mb-4 text-center text-indigo-900">
           Background Removal Tool
         </h1>
+
+        {/* ========================================= */}
+        {/* 💰 AD SLOT 1: TOP BANNER (Adsterra)       */}
+        {/* ========================================= */}
+        <div className="w-full flex justify-center mb-8">
+            <iframe 
+            src="/ad-banner.html" 
+            width="728" 
+            height="90" 
+            frameBorder="0" 
+            scrolling="no" 
+            style={{border: 'none', maxWidth: '100%', overflow: 'hidden'}}
+            title="Advertisement"
+            ></iframe>
+        </div>
+        {/* ========================================= */}
         
         <div className="bg-white rounded-3xl shadow-2xl p-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -283,6 +304,13 @@ export default function Home() {
               <p className="text-sm text-gray-600 mt-2 text-center">
                 Note: The first processing may take a bit longer as the model loads.
               </p>
+
+               {/* --- MONETIZATION: TIP JAR --- */}
+               <div className="mt-6 text-center">
+                    <a href="https://www.buymeacoffee.com/" target="_blank" className="inline-block bg-yellow-100 text-yellow-800 px-4 py-2 rounded-lg font-medium hover:bg-yellow-200 transition-colors">
+                        ☕ Buy me a coffee
+                    </a>
+               </div>
             </motion.div>
 
             <div className="lg:col-span-2 space-y-6">
@@ -290,16 +318,23 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-full flex justify-center my-6">
-  <iframe 
-    src="/ad-banner.html" 
-    width="728" 
-    height="90" 
-    frameBorder="0" 
-    scrolling="no" 
-    style={{border: 'none', maxWidth: '100%'}}
-  ></iframe>
-</div>
+
+        {/* ========================================= */}
+        {/* 💰 AD SLOT 2: BOTTOM BANNER (Adsterra)    */}
+        {/* ========================================= */}
+        <div className="w-full flex justify-center mt-12">
+            <iframe 
+            src="/ad-banner.html" 
+            width="728" 
+            height="90" 
+            frameBorder="0" 
+            scrolling="no" 
+            style={{border: 'none', maxWidth: '100%', overflow: 'hidden'}}
+            title="Advertisement"
+            ></iframe>
+        </div>
+        {/* ========================================= */}
+
       </div>
     </div>
   );
