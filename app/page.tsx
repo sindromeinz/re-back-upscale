@@ -290,6 +290,16 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="w-full flex justify-center my-6">
+  <iframe 
+    src="/ad-banner.html" 
+    width="728" 
+    height="90" 
+    frameBorder="0" 
+    scrolling="no" 
+    style={{border: 'none', maxWidth: '100%'}}
+  ></iframe>
+</div>
       </div>
     </div>
   );
